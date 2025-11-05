@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لعبة الكنز الالكتروني - KTF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>لعبة الكنز الالكتروني - KTF</h1>
+      <p class="subtitle">إذا أخطأت في أي سؤال، الكويز يعيد من البدايـة ✨</p>
+    </header>
+
+    <section class="card" id="quiz-card" aria-live="polite">
+      <div class="topbar">
+        <div id="progress" class="progress" aria-hidden="true">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="meta">
+          <span id="q-index">سؤال 1 من 5</span>
+          <span id="timer">00:20</span>
+        </div>
+      </div>
+
+      <div id="question-area" class="question-area">
+        <!-- السؤال يُملأ بواسطة JavaScript -->
+      </div>
+
+      <div id="choices" class="choices" role="list">
+        <!-- اختيارات تُولَّد برمجياً -->
+      </div>
+
+      <div class="controls">
+        <button id="next-btn" class="btn primary" disabled>التالي</button>
+        <button id="restart-btn" class="btn" hidden>إعادة من البداية</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <h2 id="result-title"></h2>
+      <p id="result-msg"></p>
+      <div class="result-actions">
+        <button id="next-quiz-btn" class="btn primary" hidden>الانتقال للكويز اللي بعده</button>
+        <button id="retry-btn" class="btn">حاول مرة أخرى</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>اختيارات زاهية ونمط ghost — دعم لوحة المفاتيح: A/S/D/F لاختيار، Enter للتأكيد</small>
+    </footer>
+  </main>
+
+  <canvas id="confetti-canvas" class="confetti"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
